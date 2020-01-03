@@ -17,6 +17,7 @@ public class CartDaoCollectionImplTest {
 		CartDao cartDao = new CartDaoCollectionImpl();
 		cartDao.addCartItem(1, 2L);
 		cartDao.addCartItem(1, 5L);
+		cartDao.addCartItem(1, 3L);
 		
 		List<MenuItem> menuItemListCustomer = cartDao.getAllCartItems(1);
 		System.out.println("====User Added Cart List for CheckOut====");

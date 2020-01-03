@@ -15,19 +15,18 @@ function validation() {
         alert("Price is required.");
         return false;
     }
-	if(/[^0-9/]/.test(itemPrice)) {
+	
+	if(/[^0-9/.]/.test(itemPrice)) {
         alert("Price has to be a number.");
         return false;
     }
+	
 	var launchDate = document.forms["form"]["dateOfLaunch"].value;
 	if(launchDate=="") {
         alert("Date of Launch is required.");
         return false;
     }
-	if(/[^0-9]/.test(launchDate)) {
-    alert("Price has to be a number.");
-        return false;
-    }
+	
 	var itemCategory = document.forms["form"]["category"].value;
     if(itemCategory=="") {
         alert("Category is required.");
