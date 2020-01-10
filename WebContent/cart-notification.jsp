@@ -43,7 +43,7 @@
 						<th></th>
 						<th class="title-name">Total</th>
 						<th class="title-price">Rs.${total}</th>
-						</th></th>
+						<th></th>
 						</tr>
 					</table>
                 </div>            

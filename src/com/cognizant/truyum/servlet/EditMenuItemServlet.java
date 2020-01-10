@@ -59,7 +59,7 @@ public class EditMenuItemServlet extends HttpServlet {
 				String name = request.getParameter("title");
 				float price = Float.parseFloat(request.getParameter("price"));
 				boolean active = request.getParameter("inStock").equals("Yes"); 
-				Date dateOfLaunch = new DateUtil().convertToDate(request.getParameter("dateOfLaunch"));
+				Date dateOfLaunch = DateUtil.convertToDate(request.getParameter("dateOfLaunch"));
 				String category = request.getParameter("category");
 				boolean freeDelivery = request.getParameter("freeDelivery") != null ;
 				MenuItem menuItem = new MenuItem(id, name, price, active, dateOfLaunch, category, freeDelivery);
