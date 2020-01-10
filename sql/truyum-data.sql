@@ -25,7 +25,7 @@ UPDATE menu_item set me_name = 'Biriyani' where me_id=1;
 -- Insert Values in user
 -- --------------------------------------------------------------------------
 
-INSERT INTO user(us_id,us_name) VALUES(1,'Vinod'),(2,'Vibu'); 
+INSERT INTO user(us_name) VALUES('Vinod'),('Vibu'); 
 
 -- --------------------------------------------------------------------------
 -- Display all Data from user
