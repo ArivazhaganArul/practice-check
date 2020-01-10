@@ -25,13 +25,15 @@ UPDATE menu_item set me_name = 'Biriyani' where me_id=1;
 -- Insert Values in user
 -- --------------------------------------------------------------------------
 
-INSERT INTO user(us_name) VALUES('Vinod'),('Vibu'); 
+INSERT INTO user(us_id,us_name) VALUES(1,'Vinod'),(2,'Vibu'); 
 
 -- --------------------------------------------------------------------------
 -- Display all Data from user
 -- --------------------------------------------------------------------------
 
 select*from user;
+
+delete from user;
 
 -- --------------------------------------------------------------------------
 -- customer menu item list
@@ -58,7 +60,7 @@ insert into cart(ct_us_id,ct_pr_id) values (1,3);
 select me_name,me_free_delivery, me_price  from menu_item
 inner join cart on ct_pr_id=me_id
 where ct_us_id=1;
-
+	
 -- --------------------------------------------------------------------------
 -- View cart total
 -- --------------------------------------------------------------------------
