@@ -3,7 +3,7 @@
 -- --------------------------------------------------------------------------
 -- Insert Values in menu_item
 -- --------------------------------------------------------------------------
-insert into menu_item values(1,'Sandwich',99.0,'Yes','2017-03-15','Main Course','Yes'),
+insert into menu_item values(1,'Biriyani',99.0,'Yes','2017-03-15','Main Course','Yes'),
 (2, 'Burger', 129.00, 'Yes', '2017-12-23','Main Course', 'No'),
 (3, 'Pizza', 149.00, 'Yes', '2018-08-21','Main Course', 'No'),
 (4, 'French Fries', 57.00, 'No', '2017-07-02','Starters', 'Yes'),
@@ -19,7 +19,7 @@ select*from menu_item;
 -- To Update menu_item
 -- --------------------------------------------------------------------------
 
-UPDATE menu_item set me_name = 'Biriyani' where me_id=1;
+UPDATE menu_item set me_name = 'Sandwich' where me_id=1;
 
 -- --------------------------------------------------------------------------
 -- Insert Values in user
@@ -79,7 +79,7 @@ select * from cart;
 -- Delete Item From cart
 -- ------------------------------------------------------
 
-delete from cart where ct_us_id=1 and ct_id=33;
+delete from cart where ct_us_id=1 and ct_pr_id=1 limit 1 ;
 
 -- --------------------------------------------------------------------------
 -- View cart items after delete
