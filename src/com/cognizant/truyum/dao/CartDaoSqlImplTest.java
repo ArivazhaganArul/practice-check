@@ -18,13 +18,11 @@ public class CartDaoSqlImplTest {
 
 	static void testAddCartItem() throws CartEmptyException {
 
-		CartDaoSqlImpl cartDaoSqlImpl = new CartDaoSqlImpl();
+		CartDao cartDao = new CartDaoSqlImpl();
 
-		CartDao cartDao = cartDaoSqlImpl;
+		cartDao.addCartItem(1, 1);
 
-		cartDao.addCartItem(1, 4);
-
-		cartDao.addCartItem(1, 3);
+		cartDao.addCartItem(1, 2);
 
 		List<MenuItem> menuItemList = cartDao.getAllCartItems(1);
 
@@ -32,21 +30,20 @@ public class CartDaoSqlImplTest {
 
 	static void testGetAllCartItems() throws CartEmptyException {
 
-		CartDaoSqlImpl cartDaoSqlImpl = new CartDaoSqlImpl();
-
-		CartDao cartDao = cartDaoSqlImpl;
+		CartDao cartDao = new CartDaoSqlImpl();
 
 		List<MenuItem> menuItemList = cartDao.getAllCartItems(1);
-
-		System.out.println("MenuItem list :" + menuItemList);
+		for (MenuItem menuItem : menuItemList) {
+			System.out.println(menuItem);
+		}
 
 	}
 
 	static void testRemoveCartItem() throws CartEmptyException {
 
-		CartDaoSqlImpl cartDaoSqlImpl = new CartDaoSqlImpl();
+		CartDao cartDao = new CartDaoSqlImpl();
 
-		CartDao cartDao = cartDaoSqlImpl;
+		
 
 		try {
 

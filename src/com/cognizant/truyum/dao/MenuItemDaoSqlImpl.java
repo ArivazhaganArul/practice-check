@@ -60,12 +60,11 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
 
 		} catch (SQLException e) {
 
-			// TODO Auto-generated catch block
-
+		
 			e.printStackTrace();
 
 		}
-
+		
 		return menuItemList;
 	}
 
@@ -119,8 +118,7 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
 
 		} catch (SQLException e) {
 
-			// TODO Auto-generated catch block
-
+			
 			e.printStackTrace();
 
 		}
