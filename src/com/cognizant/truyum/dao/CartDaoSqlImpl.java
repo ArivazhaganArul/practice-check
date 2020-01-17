@@ -56,7 +56,7 @@ public class CartDaoSqlImpl implements CartDao {
 
 		ResultSet resultSet;
 
-		boolean activeFlag, freeDeliveryFlag;
+		boolean active, freeDelivery;
 
 		MenuItem menuItem = null;
 
@@ -95,35 +95,35 @@ public class CartDaoSqlImpl implements CartDao {
 
 				float price = resultSet.getFloat(3);
 
-				String active = resultSet.getString(4);
+				String isActive = resultSet.getString(4);
 
 				Date date_of_launch = resultSet.getDate(5);
 
 				String category = resultSet.getString(6);
 
-				String freeDelivery = resultSet.getString(7);
+				String isFreeDelivery = resultSet.getString(7);
 
-				if (active != null && active.equals("Yes"))
+				if (isActive != null && isActive.equals("Yes"))
 
-					activeFlag = true;
-
-				else
-
-					activeFlag = false;
-
-				if (freeDelivery != null && freeDelivery.equals("Yes"))
-
-					freeDeliveryFlag = true;
+					active = true;
 
 				else
 
-					freeDeliveryFlag = false;
+					active = false;
+
+				if (isFreeDelivery != null && isFreeDelivery.equals("Yes"))
+
+					freeDelivery = true;
+
+				else
+
+					freeDelivery = false;
 
 				menuItem = new MenuItem(menuItemId, name, price,
 
-						activeFlag, date_of_launch, category,
+						active, date_of_launch, category,
 
-						freeDeliveryFlag);
+						freeDelivery);
 
 				menuItemList.add(menuItem);
 
